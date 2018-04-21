@@ -21,6 +21,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user', 'UserController@index')->name('user');
+Route::get('/user/add', function () {
+    return view('users.add');
+});
 Route::post('/user', ['as'=> 'user.store', 'uses' => 'UserController@store']);
 Route::get('/user/{id}', ['as' => 'user.show', 'uses' => 'UserController@show']);
 Route::put('/user/{id}/update', ['as' => 'user.update', 'uses' => 'UserController@update']);

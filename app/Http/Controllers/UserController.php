@@ -24,7 +24,8 @@ class UserController extends Controller
 
    public function store(Request $request)
    {
-       return $this->model->create($request->only($this->model->getModel()->fillable));
+      $this->model->create($request->only($this->model->getModel()->fillable));
+      return $this->index();
    }
 
    public function show($id)
