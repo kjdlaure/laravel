@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Repositories\Repository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -44,7 +45,12 @@ class UserController extends Controller
 
    public function update(Request $request, $id)
    {
-      $values = $request->only($this->model->getModel()->fillable);      
+      $values = array_filter($request->only($this->model->getModel()->fillable), 'strlen');  
+
+      if(array_key_exists('password', $values)){
+        $values['password'] = Hash::make($values['password']);
+      }  
+
       $this->model->update($values, $id);
       return $this->show($id);
    }

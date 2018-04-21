@@ -44,7 +44,7 @@
                             <button type="submit" class="btn btn-success" onclick="window.location='{{ route("user.edit", ['id' => $user->id]) }}'">
                                 Edit User
                             </button>
-                            <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user") }}'">Back</button>
+                            <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user") }}'">Show List</button>
                         </div>
                     </div>
 

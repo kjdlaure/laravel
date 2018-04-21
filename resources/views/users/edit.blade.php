@@ -114,7 +114,7 @@
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" type="password" class="form-control" name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -125,19 +125,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
                             <div class="col-md-6" style="margin-left: 35%;">
                                 <button type="submit" class="btn btn-success">
                                     Edit User
                                 </button>
-                                <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user") }}'">Back</button>
+                                <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user") }}'">Show List</button>
                             </div>
                         </div>
                     </form>
