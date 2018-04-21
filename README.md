@@ -2,11 +2,11 @@
 
 Application that enables admin to
 
--add user
--update user
--delete user
--view user details
--list all users 
+- add user
+- update user
+- delete user
+- view user details
+- list all users 
 
 # Post deployment notes
 
@@ -15,5 +15,5 @@ Application that enables admin to
 - run 'php artisan db:seed'
 
 # Login credentials
-Email : kjdlaure@gmail.com
-Password: P@ssw0rd 
+- Email : kjdlaure@gmail.com
+- Password: P@ssw0rd 
