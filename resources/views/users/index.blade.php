@@ -25,14 +25,14 @@
                             <td>{{$user->last_name}}</td>
                             <td>{{$user->email}}</td>
                             <td>
-                                <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user.show", ['id' => $user->id]) }}'">
-                                    View
+                                <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user.show", ['id' => $user->id]) }}'">                                    
+                                    <span class="fa fa-eye fa-fw"></span>
                                 </button>
-                                <button type="button" class="btn btn-success" onclick="window.location='{{ route("user.edit", ['id' => $user->id]) }}'">
-                                    Edit
+                                <button type="button" class="btn btn-success" onclick="window.location='{{ route("user.edit", ['id' => $user->id]) }}'">                                    
+                                    <span class="fa fa-pencil fa-fw"></span>
                                 </button>
-                                <button type="button" class="btn btn-danger">
-                                    Delete
+                                <button type="button" class="btn btn-danger">                                    
+                                     <span class="fa fa-trash-o fa-fw"></span>
                                 </button>
                             </td>
                           </tr>                     
