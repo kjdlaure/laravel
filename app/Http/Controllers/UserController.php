@@ -35,11 +35,18 @@ class UserController extends Controller
        return view('users.show')->with('user',$user);
    }
 
+   public function edit($id)
+   {
+      $user = $this->model->show($id);
+      return view('users.edit')->with('user',$user);
+
+   }
+
    public function update(Request $request, $id)
    {
-       $this->model->update($request->only($this->model->getModel()->fillable), $id);
-
-       return $this->model->find($id);
+      $values = $request->only($this->model->getModel()->fillable);      
+      $this->model->update($values, $id);
+      return $this->show($id);
    }
 
    public function destroy($id)

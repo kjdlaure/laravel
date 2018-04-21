@@ -39,7 +39,14 @@
                     </tbody>
                   </table>
 
-                  <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user") }}'">Back</button>
+                   <div class="form-group">
+                        <div class="col-md-6" style="margin-left: 35%;">
+                            <button type="submit" class="btn btn-success" onclick="window.location='{{ route("user.edit", ['id' => $user->id]) }}'">
+                                Edit User
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user") }}'">Back</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>

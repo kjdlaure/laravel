@@ -28,7 +28,7 @@
                                 <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user.show", ['id' => $user->id]) }}'">
                                     View
                                 </button>
-                                <button type="button" class="btn btn-success">
+                                <button type="button" class="btn btn-success" onclick="window.location='{{ route("user.edit", ['id' => $user->id]) }}'">
                                     Edit
                                 </button>
                                 <button type="button" class="btn btn-danger">

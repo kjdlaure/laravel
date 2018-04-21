@@ -18,7 +18,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user', 'UserController@index')->name('user');
 Route::get('/user/add', function () {
@@ -26,5 +25,6 @@ Route::get('/user/add', function () {
 });
 Route::post('/user', ['as'=> 'user.store', 'uses' => 'UserController@store']);
 Route::get('/user/{id}', ['as' => 'user.show', 'uses' => 'UserController@show']);
-Route::put('/user/{id}/update', ['as' => 'user.update', 'uses' => 'UserController@update']);
+Route::get('/user/{id}/edit',  ['as' => 'user.edit', 'uses' => 'UserController@edit']);
+Route::post('/user/{id}/update', ['as' => 'user.update', 'uses' => 'UserController@update']);
 Route::delete('/user/{id}', ['as'=> 'user.destroy', 'uses' => 'UserController@destroy']);
