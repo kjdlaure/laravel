@@ -12,10 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Route::get('/welcome2', function () {
-    return view('welcome2');
-});
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/user', 'UserController@index')->name('user');
+Route::post('/user', ['as'=> 'user.store', 'uses' => 'UserController@store']);
+Route::get('/user/{id}', ['as' => 'user.show', 'uses' => 'UserController@show']);
+Route::put('/user/{id}/update', ['as' => 'user.update', 'uses' => 'UserController@update']);
+Route::delete('/user/{id}', ['as'=> 'user.destroy', 'uses' => 'UserController@destroy']);
