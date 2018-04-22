@@ -62,4 +62,10 @@ class Repository implements RepositoryInterface
     {
         return $this->model->with($relations);
     }
+
+    // Return results ready for pagination
+    public function paginate($count)
+    {
+        return $this->model->paginate($count);
+    }
 }

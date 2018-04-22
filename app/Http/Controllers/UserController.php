@@ -19,7 +19,7 @@ class UserController extends Controller
   //List all users
    public function index()
    {
-   		$users = $this->model->all(); 
+   		$users = $this->model->paginate(10); 
    		return view('users.index')->with('users',$users);
    }
 
