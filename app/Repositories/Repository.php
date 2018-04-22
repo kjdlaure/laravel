@@ -66,6 +66,6 @@ class Repository implements RepositoryInterface
     // Return results ready for pagination
     public function paginate($count)
     {
-        return $this->model->paginate($count);
+        return $this->model->orderBy('created_at', 'desc')->paginate($count);
     }
 }
