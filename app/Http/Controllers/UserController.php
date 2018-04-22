@@ -27,6 +27,7 @@ class UserController extends Controller
    public function store(Request $request)
    {    
       $user = $this->model->create($this->getValuesArray($request));
+      flash('User successfully added!')->success();
       return $this->show($user->id);
    }
 
@@ -49,6 +50,7 @@ class UserController extends Controller
    public function update(Request $request, $id)
    {
       $this->model->update($this->getValuesArray($request), $id);
+      flash('User successfully updated!')->success();
       return $this->show($id);
    }
 
