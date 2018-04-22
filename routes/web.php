@@ -28,3 +28,4 @@ Route::get('/user/{id}', ['as' => 'user.show', 'uses' => 'UserController@show'])
 Route::get('/user/{id}/edit',  ['as' => 'user.edit', 'uses' => 'UserController@edit']);
 Route::post('/user/{id}/update', ['as' => 'user.update', 'uses' => 'UserController@update']);
 Route::delete('/user/{id}', ['as'=> 'user.destroy', 'uses' => 'UserController@destroy']);
+Route::delete('/userDeleteMultiple', ['as'=> 'user.deleteMultiple', 'uses' => 'UserController@deleteMultiple']);

@@ -57,8 +57,17 @@ class UserController extends Controller
    //Delete user
    public function destroy($id)
    {
-      return $this->model->delete($id);
+      $this->model->delete($id);
+      return response()->json(['success'=>"User Deleted successfully!", 'tr'=>'tr_'.$id]);
    }
+
+   //Delete multiple users
+   public function deleteMultiple(Request $request)
+   {
+      $ids = $request->ids;
+      $this->model->delete(explode(",",$ids));
+      return response()->json(['success'=>"User/s Deleted successfully!"]);
+  }
 
    //Retrieve user data
    private function getValuesArray(Request $request)
