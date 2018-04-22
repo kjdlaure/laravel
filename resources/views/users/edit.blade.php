@@ -127,7 +127,7 @@
                         <div class="form-group">
                             <div class="col-md-6" style="margin-left: 35%;">
                                 <button type="submit" class="btn btn-success">
-                                    Edit User
+                                    Update
                                 </button>
                                 <button type="button" class="btn btn-primary" onclick="window.location='{{ route("user") }}'">Show List</button>
                             </div>
