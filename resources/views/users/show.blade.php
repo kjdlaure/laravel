@@ -3,19 +3,14 @@
 @section('content')
 <div class="container">
     @include('flash::message')
-    
+
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
+                <div class="panel-heading">Details for {{$user->username}}</div>
               
                 <div class="panel-body">
-                   <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Details for {{$user->username}}</th>
-                        
-                      </tr>
-                    </thead>
+                   <table class="table">                   
                     <tbody>                       
                         <tr>
                             <td>ID: {{$user->id}}</td>
