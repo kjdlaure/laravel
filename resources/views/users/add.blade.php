@@ -125,14 +125,6 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
                             <div class="col-md-6" style="margin-left: 35%;">
                                 <button type="submit" class="btn btn-success">
                                     Add User
